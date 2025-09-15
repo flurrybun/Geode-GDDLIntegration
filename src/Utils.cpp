@@ -232,8 +232,8 @@ int Utils::getCorrectedFPS() {
 }
 
 bool Utils::isMobile() {
-#ifdef GEODE_IS_ANDROID
-        return true;
+#ifdef GEODE_IS_MOBILE
+    return true;
 #else
     return false;
 #endif
