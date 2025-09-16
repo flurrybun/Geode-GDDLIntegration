@@ -20,7 +20,7 @@ public:
             icon), name(name), description(description) {}
 
     CCNode * getButtonSprite() const {
-        const auto buttonSprite = CCSprite::create(Mod::get()->expandSpriteName(icon.c_str()).data());
+        const auto buttonSprite = CCSprite::createWithSpriteFrameName(Mod::get()->expandSpriteName(icon.c_str()).data());
         buttonSprite->setScale(0.55f);
         return buttonSprite;
     }

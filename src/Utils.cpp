@@ -160,7 +160,7 @@ void Utils::bindCacheDownloadCallback(EventListener<web::WebTask>& cacheEventLis
 }
 
 CCSprite* Utils::getTierSpriteFromName(const char* name) {
-    const auto sprite = CCSprite::create(Mod::get()->expandSpriteName(name).data());
+    const auto sprite = CCSprite::createWithSpriteFrameName(name);
 
     sprite->setScale(0.275f);
     sprite->setAnchorPoint({0, 0});
@@ -169,10 +169,10 @@ CCSprite* Utils::getTierSpriteFromName(const char* name) {
 }
 
 CCSprite* Utils::getSpriteFromTier(const int tier) {
-    if (tier == -1) {
-        return getTierSpriteFromName("tier_unrated.png");
-    }
-    return getTierSpriteFromName(("tier_" + std::to_string(tier) + ".png").c_str());
+    if (tier == -1) return getTierSpriteFromName("tier_unrated.png"_spr);
+
+    std::string fileName = "tier_" + std::to_string(tier) + ".png";
+    return getTierSpriteFromName(Mod::get()->expandSpriteName(fileName).data());
 }
 
 bool Utils::notExcluded(int levelID) {

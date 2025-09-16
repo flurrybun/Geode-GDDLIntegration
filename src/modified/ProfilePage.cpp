@@ -3,6 +3,7 @@
 #include "Geode/modify/ProfilePage.hpp"
 
 #include "layers/GDDLDemonSplitLayer.h"
+#include <Utils.h>
 
 using namespace geode::prelude;
 
@@ -14,7 +15,7 @@ class $modify(GDDLProfileMod, ProfilePage) {
         // get the existing nodes
         auto statsMenu = m_mainLayer->getChildByID("stats-menu");
         // create GDDL button
-        auto gddlButtonSprite = CCSprite::create(Mod::get()->expandSpriteName(std::string_view{"tier_unrated.png"}).data());
+        auto gddlButtonSprite = Utils::getSpriteFromTier(-1);
         gddlButtonSprite->setScale(0.15f);
         auto gddlButton = CCMenuItemSpriteExtra::create(gddlButtonSprite, this, menu_selector(GDDLProfileMod::onGDDLDemonSplit));
         gddlButton->setScale(0.5f);

@@ -1,5 +1,5 @@
 {
-	"geode": "4.6.3",
+	"geode": "4.8.0",
 	"version": "v1.2.5",
 	"gd": {
 		"android": "2.2074",
@@ -16,13 +16,9 @@
 		"source": "https://github.com/B1rtek/Geode-GDDLIntegration",
 		"community": "https://discord.gg/gddl"
 	},
-	"dependencies": [
-		{
-			"id": "geode.node-ids",
-			"version": ">=1.13.2",
-			"importance": "required"
-		}
-	],
+	"dependencies": {
+		"geode.node-ids": ">=1.13.2"
+	},
 	"tags": [
 		"utility",
 		"interface",
@@ -33,11 +29,17 @@
 		"url": "https://github.com/B1rtek/Geode-GDDLIntegration/issues/new/choose"
 	},
 	"resources": {
+		"spritesheets": {
+			"SkillsetSheet": [
+				"resources/skillsets/*.png"
+			],
+			"TierSheet": [
+				"resources/tiers/*.png"
+			]
+		},
 		"sprites": [
 			"resources/search.png",
-			"resources/gddlpopup.png",
-			"resources/tiers/*.png",
-			"resources/skillsets/*.png"
+			"resources/gddlpopup.png"
 		]
 	},
 	"settings": {
