@@ -59,6 +59,12 @@
 			"one-of": ["Left of Title", "Right of Title", "Stars/Moons Label", "Left of Difficulty"],
 			"default": "Stars/Moons Label"
 		},
+		"show-in-level-cell": {
+			"name": "Show in level cell",
+			"description": "Shows the <cr>GDDL Tier</c> in the <cb>level browser</c> and <cb>lists</c>.",
+			"type": "bool",
+			"default": true
+		},
 		"title-level-info-popup-settings": {
 			"name": "Level details popup",
 			"type": "title"
